@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "6b51179d-cb94-4205-ac72-73d9af894caf",
+		"name": "banking system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9009897"
+	},
+	"item": [
+		{
+			"name": "withdraw money",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "3"
+						},
+						{
+							"key": "amt",
+							"value": "1020000"
+						}
+					]
+				},
+				"url": "http://localhost/banking_system_job_task/api/api_add_user_withdraw"
+			},
+			"response": []
+		},
+		{
+			"name": "sign up api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/banking_system_job_task/api/register_user?name=api test user&email=test5@gmail.com&password=123456789&role_id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"banking_system_job_task",
+						"api",
+						"register_user"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "api test user"
+						},
+						{
+							"key": "email",
+							"value": "test5@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						},
+						{
+							"key": "role_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test5@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/banking_system_job_task/api/login_user"
+			},
+			"response": []
+		},
+		{
+			"name": "user send money to other user api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sender_user_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "receiver_user_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "amt",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost/banking_system_job_task/api/send_money_to_user"
+			},
+			"response": []
+		},
+		{
+			"name": "user deposit money",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "3"
+						},
+						{
+							"key": "amt",
+							"value": "30000"
+						}
+					]
+				},
+				"url": "http://localhost/banking_system_job_task/api/api_add_user_deposit"
+			},
+			"response": []
+		}
+	]
+}
